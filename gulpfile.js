@@ -7,7 +7,7 @@ gulp.task('server', function () {
     browserSync({
         port: 9000,
         server: {
-        baseDir: 'app'
+        baseDir: ''
     }
     });   
 });
@@ -22,12 +22,13 @@ gulp.task('sass',function(){
 // Слежка
 gulp.task('watch', function () {
     gulp.watch([
-        'app/*html',
-        'app/css/*.css',
-        'app/js/**/*.js'
-    ]).on('change', browserSync.reload);
+        '*.html',
+        'sass/**/*.scss',
+        'css/*.css',
+        'js/**/*.js'
+    ],['sass']).on('change', browserSync.reload);
 });
 
 
 // Запуск по умолчанию
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server', 'sass', 'watch']);
