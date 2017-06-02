@@ -326,9 +326,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    &:last-child {
-        margin-bottom: 270px;
-    }
 }
 
 .my-works-item {
@@ -343,10 +340,12 @@ body {
         border: 2px solid #3ba8c0;
         border-radius: 4px;
         margin-bottom: 10px;
+        cursor: pointer;
     }
 }
 
-.site-name {
+.site-name,
+.add-text{
     font-size: 13px;
     color: #3ba8c0;
     font-weight: 300;
@@ -357,6 +356,24 @@ body {
 .site-inform {
     font-size: 15px;
     font-weight: 300px;
+}
+.add-project {
+    margin-left: 15px;
+    margin-bottom: 270px;
+    height: 130px;
+    width: 166px;
+    border: 1px dashed #3ba8c0;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    background: #edf8fc url(../img/bg-add-project.png) no-repeat center;
+    cursor: pointer;
+    .add-text {
+        font-style: normal;
+        position: absolute;
+        bottom: 10px;
+        left: 35px;
+    }
 }
 
 
