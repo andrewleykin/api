@@ -206,7 +206,8 @@ body {
 
 /* About me */
 .about-me,
-.my-works {
+.my-works,
+.write {
   width: 650px;
 }
 
@@ -405,6 +406,87 @@ body {
   position: absolute;
   bottom: 10px;
   left: 35px;
+}
+
+/* Write */
+.write {
+  margin-bottom: 40px;
+}
+
+.write-title-block {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 55px 60px;
+  text-align: center;
+  background: #48cbe8;
+  border-bottom: 17px solid #67dffa;
+}
+
+.write-title-block h2 {
+  font-size: 27px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.write-form-block {
+  background: #eff3f7;
+  padding: 55px 100px;
+  color: #959aa8;
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-name-block,
+.form-email-block,
+.form-message-block {
+  width: 190px;
+  font-size: 19px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.form-name-block input,
+.form-name-block textarea,
+.form-email-block input,
+.form-email-block textarea,
+.form-message-block input,
+.form-message-block textarea {
+  margin-top: 10px;
+  padding: 15px 10px;
+  border: 1px solid #48cbe8;
+  border-radius: 3px;
+}
+
+.form-name-block input:hover,
+.form-name-block textarea:hover,
+.form-email-block input:hover,
+.form-email-block textarea:hover,
+.form-message-block input:hover,
+.form-message-block textarea:hover {
+  cursor: pointer;
+}
+
+.form-name-block input::-webkit-input-placeholder,
+.form-name-block textarea::-webkit-input-placeholder,
+.form-email-block input::-webkit-input-placeholder,
+.form-email-block textarea::-webkit-input-placeholder,
+.form-message-block input::-webkit-input-placeholder,
+.form-message-block textarea::-webkit-input-placeholder {
+  color: #48cbe8;
+  font-size: 13px;
+  transition: 0.3s all;
+}
+
+.form-name-block input:focus::-webkit-input-placeholder,
+.form-name-block textarea:focus::-webkit-input-placeholder,
+.form-email-block input:focus::-webkit-input-placeholder,
+.form-email-block textarea:focus::-webkit-input-placeholder,
+.form-message-block input:focus::-webkit-input-placeholder,
+.form-message-block textarea:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 /* Footer */

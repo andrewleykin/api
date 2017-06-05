@@ -204,7 +204,8 @@ body {
 /* About me */
 
 .about-me,
-.my-works {
+.my-works,
+.write {
     width: 650px;
 }
 
@@ -396,6 +397,63 @@ body {
         bottom: 10px;
         left: 35px;
     }
+}
+
+/* Write */
+.write {
+    margin-bottom: 40px;
+}
+.write-title-block {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding: 55px 60px;
+    text-align: center;
+    background: #48cbe8;
+    border-bottom: 17px solid #67dffa;
+    h2 {
+        font-size: 27px;
+        color: #fff;
+        font-weight: 400;
+    }
+}
+.write-form-block {
+    background: #eff3f7;
+    padding: 55px 100px;
+    color: #959aa8;
+    
+}
+.form-top {
+    display: flex;
+    justify-content: space-between;
+}
+.form-name-block,
+.form-email-block,
+.form-message-block{
+    width: 190px;
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    input,
+    textarea{
+        margin-top: 10px;
+        padding: 15px 10px;
+        border: 1px solid #48cbe8;
+        border-radius: 3px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: #48cbe8;
+        font-size: 13px;
+        transition: 0.3s all;
+    }
+    input:focus::-webkit-input-placeholder,
+    textarea:focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    
 }
 
 
