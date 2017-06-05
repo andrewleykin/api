@@ -206,6 +206,7 @@ body {
 
 /* About me */
 .about-me,
+.my-works-content,
 .my-works,
 .write {
   width: 650px;
@@ -388,7 +389,7 @@ body {
   font-weight: 300px;
 }
 
-.add-project {
+.add-proj {
   margin-left: 15px;
   margin-bottom: 270px;
   height: 130px;
@@ -401,11 +402,55 @@ body {
   cursor: pointer;
 }
 
-.add-project .add-text {
+.add-proj .add-text {
   font-style: normal;
   position: absolute;
   bottom: 10px;
   left: 35px;
+}
+
+.add-project {
+  width: 360px;
+  background: #eff3f7;
+}
+
+.add-project-title {
+  width: 100%;
+  height: 45px;
+  background: #48cbe8;
+  padding-left: 10px;
+  border-bottom: 10px solid #67dffa;
+  margin-bottom: 15px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-project-title p {
+  line-height: 45px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.add-project-title .add-project-close {
+  width: 27px;
+  height: 27px;
+  content: "";
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.add-project-title .add-project-close::before {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+  content: "";
+  transform: rotate(45deg);
 }
 
 /* Write */
@@ -441,7 +486,9 @@ body {
 
 .form-name-block,
 .form-email-block,
-.form-message-block {
+.form-message-block,
+.form-capcha,
+.form-btn {
   width: 190px;
   font-size: 19px;
   font-weight: 300;
@@ -453,7 +500,11 @@ body {
 .form-email-block input,
 .form-email-block textarea,
 .form-message-block input,
-.form-message-block textarea {
+.form-message-block textarea,
+.form-capcha input,
+.form-capcha textarea,
+.form-btn input,
+.form-btn textarea {
   margin-top: 10px;
   padding: 15px 10px;
   border: 1px solid #48cbe8;
@@ -465,7 +516,11 @@ body {
 .form-email-block input:hover,
 .form-email-block textarea:hover,
 .form-message-block input:hover,
-.form-message-block textarea:hover {
+.form-message-block textarea:hover,
+.form-capcha input:hover,
+.form-capcha textarea:hover,
+.form-btn input:hover,
+.form-btn textarea:hover {
   cursor: pointer;
 }
 
@@ -474,7 +529,11 @@ body {
 .form-email-block input::-webkit-input-placeholder,
 .form-email-block textarea::-webkit-input-placeholder,
 .form-message-block input::-webkit-input-placeholder,
-.form-message-block textarea::-webkit-input-placeholder {
+.form-message-block textarea::-webkit-input-placeholder,
+.form-capcha input::-webkit-input-placeholder,
+.form-capcha textarea::-webkit-input-placeholder,
+.form-btn input::-webkit-input-placeholder,
+.form-btn textarea::-webkit-input-placeholder {
   color: #48cbe8;
   font-size: 13px;
   transition: 0.3s all;
@@ -485,8 +544,155 @@ body {
 .form-email-block input:focus::-webkit-input-placeholder,
 .form-email-block textarea:focus::-webkit-input-placeholder,
 .form-message-block input:focus::-webkit-input-placeholder,
-.form-message-block textarea:focus::-webkit-input-placeholder {
+.form-message-block textarea:focus::-webkit-input-placeholder,
+.form-capcha input:focus::-webkit-input-placeholder,
+.form-capcha textarea:focus::-webkit-input-placeholder,
+.form-btn input:focus::-webkit-input-placeholder,
+.form-btn textarea:focus::-webkit-input-placeholder {
   color: transparent;
+}
+
+.form-capcha {
+  width: 100%;
+}
+
+.form-capcha input {
+  margin-top: 30px;
+  padding: 5px 10px;
+}
+
+.form-capcha-img {
+  margin-top: 10px;
+  width: 180px;
+  height: 80px;
+  border: 1px solid #48cbe8;
+  border-radius: 3px;
+  background: #fff;
+  float: left;
+  margin-right: 20px;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.form-btn input[type="submit"] {
+  background: #48cbe8;
+  padding: 10px 20px 5px;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+  width: 140px;
+  border-bottom: 4px solid #3ba8c0;
+}
+
+.form-btn input[type="submit"]:active {
+  border-top: 4px solid #3ba8c0;
+  border-bottom: 0;
+}
+
+.form-btn input[type="reset"] {
+  background: #849db5;
+  padding: 10px 20px 5px;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+  width: 140px;
+  border-bottom: 4px solid #687b8f;
+}
+
+.form-btn input[type="reset"]:active {
+  border-top: 4px solid #687b8f;
+  border-bottom: 0;
+}
+
+/* Login */
+.autorize {
+  display: flex;
+  margin: auto;
+  margin-top: 10%;
+  width: 590px;
+  height: 480px;
+  flex-direction: column;
+  background: #eff3f7;
+}
+
+.auto-title {
+  width: 100%;
+  height: 92px;
+  background: #48cbe8;
+  text-align: center;
+  border-bottom: 15px solid #67dffa;
+  margin-bottom: 35px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.auto-title p {
+  line-height: 92px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.auto-form {
+  text-align: center;
+}
+
+.auto-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-form form label {
+  font-size: 36px;
+  font-weight: 300;
+  color: #959aa8;
+  margin-bottom: 5px;
+}
+
+.auto-form form input {
+  padding: 20px 15px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #48cbe8;
+  border-radius: 3px;
+}
+
+.auto-form form input::-webkit-input-placeholder {
+  color: #48cbe8;
+  font-size: 13px;
+  transition: 0.3s all;
+}
+
+.auto-form form input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.auto-form form input[type="submit"] {
+  margin-top: 30px;
+  background: #48cbe8;
+  padding: 10px 20px 5px;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+  width: 140px;
+  border-bottom: 4px solid #3ba8c0;
+}
+
+.auto-form form input[type="submit"]:active {
+  border-top: 4px solid #3ba8c0;
+  border-bottom: 0;
 }
 
 /* Footer */

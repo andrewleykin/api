@@ -204,6 +204,7 @@ body {
 /* About me */
 
 .about-me,
+.my-works-content,
 .my-works,
 .write {
     width: 650px;
@@ -379,8 +380,9 @@ body {
 .site-inform {
     font-size: 15px;
     font-weight: 300px;
+    
 }
-.add-project {
+.add-proj {
     margin-left: 15px;
     margin-bottom: 270px;
     height: 130px;
@@ -398,8 +400,48 @@ body {
         left: 35px;
     }
 }
-
+.add-project {
+    width: 360px;
+    background: #eff3f7;
+    &-title {
+        width: 100%;
+        height: 45px;
+        background: #48cbe8;
+        padding-left: 10px;
+        border-bottom: 10px solid #67dffa;
+        margin-bottom: 15px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            line-height: 45px;
+            font-size: 25px;
+            color: #fff;
+        }
+        .add-project-close {
+            width: 27px;
+            height: 27px;
+            content: "";
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            &::before {
+                width: 15px;    
+                height: 15px;   
+                border: 1px solid #fff;
+                color: #fff;
+                content: "";
+                transform: rotate(45deg);
+            }
+        } 
+    }
+     
+}
 /* Write */
+
 .write {
     margin-bottom: 40px;
 }
@@ -428,7 +470,9 @@ body {
 }
 .form-name-block,
 .form-email-block,
-.form-message-block{
+.form-message-block,
+.form-capcha,
+.form-btn{
     width: 190px;
     font-size: 19px;
     font-weight: 300;
@@ -455,8 +499,133 @@ body {
     }
     
 }
+.form-capcha {
+    width: 100%;
+    input {
+        margin-top: 30px;
+        padding: 5px 10px;
+    }
+}
+.form-capcha-img {
+    margin-top: 10px;
+    width: 180px;
+    height: 80px;
+    border: 1px solid #48cbe8;
+    border-radius: 3px;
+    background: #fff;
+    float: left;
+    margin-right: 20px;
+}
 
+.form-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    input[type="submit"] {
+        background: #48cbe8;
+        padding: 10px 20px 5px;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        border-radius: 5px;
+        font-size: 19px;
+        cursor: pointer;
+        width: 140px;
+        border-bottom: 4px solid #3ba8c0;
+        &:active {
+            border-top: 4px solid #3ba8c0;
+            border-bottom: 0;
+        }
+    }
+    input[type="reset"] {
+        background: #849db5;
+        padding: 10px 20px 5px;
+        color: #fff;
+        outline: 0;
+        border: 0;
+        border-radius: 5px;
+        font-size: 19px;
+        cursor: pointer;
+        width: 140px;
+        border-bottom: 4px solid #687b8f;
+        &:active {
+            border-top: 4px solid #687b8f;
+            border-bottom: 0;
+        }
+    }
+}
 
+/* Login */
+
+.autorize {
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
+    width: 590px;
+    height: 480px;
+    flex-direction: column;
+    background: #eff3f7;
+}
+.auto-title {
+    width: 100%;
+    height: 92px;
+    background: #48cbe8;
+    text-align: center;
+    border-bottom: 15px solid #67dffa;
+    margin-bottom: 35px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    p {
+        line-height: 92px;
+        font-size: 40px;
+        color: #fff;
+    }
+}
+.auto-form {
+    text-align: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 36px;
+            font-weight: 300;
+            color: #959aa8;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 20px 15px;
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #48cbe8;
+            border-radius: 3px;
+        }
+        input::-webkit-input-placeholder {
+            color: #48cbe8;
+            font-size: 13px;
+            transition: 0.3s all;
+        }
+        input:focus::-webkit-input-placeholder {
+            color: transparent
+        }
+        input[type="submit"] {
+            margin-top: 30px;
+            background: #48cbe8;
+            padding: 10px 20px 5px;
+            color: #fff;
+            outline: 0;
+            border: 0;
+            border-radius: 5px;
+            font-size: 19px;
+            cursor: pointer;
+            width: 140px;
+            border-bottom: 4px solid #3ba8c0;
+            &:active {
+                border-top: 4px solid #3ba8c0;
+                border-bottom: 0;
+            }
+    }
+    }
+}
 /* Footer */
 
 .page-footer {
