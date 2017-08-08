@@ -6,7 +6,7 @@ $(function () {
 	function getUrl(method, params) {
 		if (!method) throw new Error('Не указан метод');
 		params = params || {};
-		params['access_token'] = 'bcfa0243ddfa2e4b5408fa977939aaa6e35f6cf189db723363d7a978a21d89320ef7647feb7f170d04eb8';
+		params['access_token'] = '9290a921954eb7bd30c71f4235e73640512c93c6a726cbe2aa32aef990246aab26ec71eb776e113e1f8ee';
 		return 'https://api.vk.com/method/' + method +'?' + $.param(params);
 	}
 
